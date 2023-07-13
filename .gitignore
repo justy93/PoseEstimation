@@ -1,0 +1,6 @@
+*.mp4
+*.avi
+predictions/vitpose/
+predictions/halpe_26/clip_tri_3/alphapose-results.json
+predictions/rtmpose/clip_10k_1/results_clip_10k_1.json
+predictions/rtmpose/output-20230613T202359Z-001.zip

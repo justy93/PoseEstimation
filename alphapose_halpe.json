@@ -1,0 +1,36 @@
+{
+    "labels": "configs/halpe26_classes.txt",
+	"model": "alphapose",
+    "index": [
+        {
+            "file": "clip_marathon_1.mp4",
+            "name": "clip_marathon_1",
+            "annotations": "annotations/clip_marathon_1.json",
+			"predictions": "predictions/halpe_26/clip_marathon_1/alphapose-results.json"
+        },
+        {
+            "file": "clip_tri_1.mp4",
+            "name": "clip_tri_1",
+            "annotations": "annotations/clip_tri_1.json",
+			"predictions": "predictions/halpe_26/clip_tri_1/alphapose-results.json"
+        },
+        {
+            "file": "clip_tri_3.mp4",
+            "name": "clip_tri_3",
+            "annotations": "annotations/clip_tri_3.json",
+			"predictions": "predictions/halpe_26/clip_tri_3/alphapose-results.json"
+        },
+        {
+            "file": "clip_10k_2.mp4",
+            "name": "clip_10k_2",
+            "annotations": "annotations/clip_10k_2.json",
+			"predictions": "predictions/halpe_26/clip_10k_2/alphapose-results.json"
+        },
+        {
+            "file": "short.mp4",
+            "name": "short",
+            "annotations": "annotations/short.json",
+			"predictions": "predictions/halpe_26/short/alphapose-results.json"
+        }
+    ]
+}

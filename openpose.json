@@ -1,0 +1,36 @@
+{
+    "labels": "configs/openpose_classes.txt",
+	"model": "openpose",
+    "index": [
+        {
+            "file": "clip_tri_1.mp4",
+            "name": "clip_tri_1",
+            "annotations": "annotations/clip_tri_1.json",
+			"predictions": "predictions/OpenPose/clip_tri_1/"
+        },
+        {
+            "file": "clip_tri_3.mp4",
+            "name": "clip_tri_3",
+            "annotations": "annotations/clip_tri_3.json",
+			"predictions": "predictions/OpenPose/clip_tri_3/"
+        },
+        {
+            "file": "clip_marathon_1.mp4",
+            "name": "clip_marathon_1",
+            "annotations": "annotations/clip_marathon_1.json",
+			"predictions": "predictions/OpenPose/clip_marathon_1/"
+        },
+        {
+            "file": "clip_10k_2.mp4",
+            "name": "clip_10k_2",
+            "annotations": "annotations/clip_10k_2.json",
+			"predictions": "predictions/OpenPose/clip_10k_2/"
+        },
+        {
+            "file": "short.mp4",
+            "name": "short",
+            "annotations": "annotations/short.json",
+			"predictions": "predictions/OpenPose/short/"
+        }
+    ]
+}
