@@ -1,0 +1,16 @@
+{
+	"annotations": "annotations/annot_mpii.json",
+    "model": [
+        {
+			"labels": "configs/halpe26_classes.txt",
+			"model": "alphapose",
+			"predictions": "predictions/halpe_26/mpii",
+			"file": "alphapose-results.json"
+		},
+        {
+			"labels": "configs/openpose_classes.txt",
+			"model": "openpose",
+			"predictions": "predictions/OpenPose/mpii"
+		}
+    ]
+}
