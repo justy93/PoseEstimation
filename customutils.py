@@ -1,4 +1,6 @@
-import json
+import os, argparse, json, re
+from collections import defaultdict
+import pandas as pd
 
 def get_classes(classes_path):
     with open(classes_path) as f:
@@ -53,3 +55,16 @@ def compute_area(bounding_box):
 
 def compute_area_coco(bounding_box):
     return bounding_box[2]*bounding_box[3]
+
+
+def load_images_dataframe():
+    # Load images dataset
+    running_annotations = '/mnt/d/Justine/uni/videos/lite_running_keypoints.json'
+    with open(running_annotations, 'r') as f:
+        videos_ids = defaultdict(list)
+        annots = json.load(f)
+        df_running_annotations = pd.DataFrame(annots)
+    
+    return df_running_annotations
+
+    
