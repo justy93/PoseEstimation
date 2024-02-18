@@ -1,0 +1,25 @@
+{
+    "labels": "configs/halpe26_classes.txt",
+	"model": "cotracker",
+    "index": [
+        {
+	"file" : "Athletics_Mixed_Tokyo_2020_8.mp4",
+	"name" : "Athletics_Mixed_Tokyo_2020_8",
+	"annotations": "../videos/annotations/Athletics_Mixed_Tokyo_2020_8.json",
+	"predictions": "../data/videos/results/alphapose/Athletics_Mixed_Tokyo_2020_8.json",
+	"is60fps": 0
+	},{
+	"file" : "Athletics_Mixed_Tokyo_2020_39.mp4",
+	"name" : "Athletics_Mixed_Tokyo_2020_39",
+	"annotations": "../videos/annotations/Athletics_Mixed_Tokyo_2020_39.json",
+	"predictions": "../data/videos/results/alphapose/Athletics_Mixed_Tokyo_2020_39.json",
+	"is60fps": 0
+	},{
+	"file" : "Athletics_Mixed_Tokyo_2020_20_1.mp4",
+	"name" : "Athletics_Mixed_Tokyo_2020_20_1",
+	"annotations": "../videos/annotations/Athletics_Mixed_Tokyo_2020_20_1.json",
+	"predictions": "../data/videos/results/alphapose/Athletics_Mixed_Tokyo_2020_20_1.json",
+	"is60fps": 0
+	}]
+	}
+	

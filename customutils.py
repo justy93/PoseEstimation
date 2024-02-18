@@ -63,8 +63,16 @@ def compute_area_coco(bounding_box):
     return bounding_box[2]*bounding_box[3]
 
 
+def get_x_y_v_keypoints(kpts):
+    kpts = np.array(kpts).reshape(-1,3)
+    x = kpts[:,0]
+    y = kpts[:,1]
+    vi = kpts[:,2]
+    return x, y, vi
+    
+
 def compute_area_keypoints(kpts):
-    x_values, y_values = get_x_y_keypoints(kpts)
+    x_values, y_values, vi = get_x_y_v_keypoints(kpts)
     
     # Get the minimum x and y values
     min_x = min(x_values)
@@ -103,6 +111,15 @@ def load_categories_dataframe():
         df = pd.DataFrame(annots['categories'])
     
     return df
+    
+def load_pe_dataframe(model):
+    # Load images dataset
+    running_annotations = '/mnt/d/Justine/uni/videos/results/' + model + '/person_keypoints_running.json'
+    with open(running_annotations, 'r') as f:
+        annots = json.load(f)
+        df = pd.DataFrame(annots)
+    
+    return df
 
 def get_head_size(x1,y1,x2,y2):
     headSize = 0.6*np.linalg.norm(np.subtract([x2,y2],[x1,y1]))
@@ -126,13 +143,6 @@ def edit_keypoints(kpts):
     vi = kpts[:,2]
     kpts = kpts[:,0:2]
     return kpts, vi
-
-
-def get_x_y_keypoints(kpts):
-    kpts = np.array(kpts).reshape(-1,3)
-    x = kpts[:,0]
-    y = kpts[:,1]
-    return x, y
 
 
 def OKS(kpts1, kpts2, area, start, end):
