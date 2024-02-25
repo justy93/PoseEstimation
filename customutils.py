@@ -86,7 +86,7 @@ def compute_area_keypoints(kpts):
     return box_width*box_height
     
 
-def compute_area_keypoints(x_values, y_values):    
+def compute_area_x_y_kpts(x_values, y_values):    
     # Get the minimum x and y values
     min_x = min(x_values)
     max_x = max(x_values)
