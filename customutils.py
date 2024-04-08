@@ -38,7 +38,27 @@ def get_bb_coco(points):
 
     return [min_x, min_y, box_width, box_height]
 
-    
+def get_bbox_coord(bb_coco):
+    min_x = bb_coco[0]
+    min_y = bb_coco[1]
+    box_width = bb_coco[2]
+    box_height = bb_coco[3]
+    return [min_x, min_y, min_x + box_width, min_y + box_height]
+
+def get_bb_coco_keypoints(kpts):
+    x_values, y_values, vi = get_x_y_v_keypoints(kpts)
+
+    # Get the minimum x and y values
+    min_x = min(x_values)
+    max_x = max(x_values)
+    min_y = min(y_values)
+    max_y = max(y_values)
+
+    box_width = max_x - min_x
+    box_height = max_y - min_y
+
+    return [min_x, min_y, box_width, box_height]
+
 def get_bb(points):
     x_values = [item["x"] for item in points]
     y_values = [item["y"] for item in points]
