@@ -18,6 +18,8 @@ def get_classes(classes_path):
 def get_id_by_name(labels, name):
     return labels.index(name)
 
+def is_inside_box(point,box):
+    return box[0]+box[2] > point[0] > box[0] and box[1]+box[3] > point[1] > box[1]
 
 def writeJson(val,fname):
   with open(fname, 'w') as data_file:
